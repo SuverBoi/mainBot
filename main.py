@@ -61,13 +61,13 @@ def arc_story_end():
     return markup
 
 
-def arc_story_var1():
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn_one = types.KeyboardButton("🌳 Пройти через глибокий ліс.")
-    btn_two = types.KeyboardButton("🪨 Піднятися на гору для кращого огляду.")
-    markup.row(btn_one)
-    markup.row(btn_two)
-    return markup
+# def arc_story_var1():
+#     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+#     btn_one = types.KeyboardButton("🌳 Пройти через глибокий ліс.")
+#     btn_two = types.KeyboardButton("🪨 Піднятися на гору для кращого огляду.")
+#     markup.row(btn_one)
+#     markup.row(btn_two)
+#     return markup
 
 def i_arc_story_var1():
     kb = types.InlineKeyboardMarkup()
@@ -76,14 +76,20 @@ def i_arc_story_var1():
     kb.row(btn_one, btn_two)
     return kb
 
-def arc_story_var2():
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn_one = types.KeyboardButton("👣 Досліджувати руїни.")
-    btn_two = types.KeyboardButton("🚀 Вирушити назад до табору.")
-    markup.row(btn_one)
-    markup.row(btn_two)
-    return markup
+# def arc_story_var2():
+#     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+#     btn_one = types.KeyboardButton("👣 Досліджувати руїни.")
+#     btn_two = types.KeyboardButton("🚀 Вирушити назад до табору.")
+#     markup.row(btn_one)
+#     markup.row(btn_two)
+#     return markup
 
+def i_arc_story_var2():
+    kb = types.InlineKeyboardMarkup()
+    btn_one = types.InlineKeyboardButton("👣 Йти в руїни", callback_data="👣 Йти в руїни")
+    btn_two = types.InlineKeyboardButton("🚀 Назад в табір", callback_data="🚀 Назад в табір")
+    kb.row(btn_one, btn_two)
+    return kb
 
 def arc_story_var3():
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -93,24 +99,42 @@ def arc_story_var3():
     markup.row(btn_two)
     return markup
 
+def i_arc_story_var3():
+    kb = types.InlineKeyboardMarkup()
+    btn_one = types.InlineKeyboardButton("👁️ Досліджувати скелю", callback_data="👁️ Досліджувати скелю")
+    btn_two = types.InlineKeyboardButton("🚀 Назад в табір", callback_data="🚀 Назад в табір")
+    kb.row(btn_one, btn_two)
+    return kb
 
-def arc_story_var4():
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn_one = types.KeyboardButton("🗡️ Вступити в бій зі сторожами.")
-    btn_two = types.KeyboardButton("🏃‍♀️ Постаратися уникнути сторожів.")
-    markup.row(btn_one)
-    markup.row(btn_two)
-    return markup
+# def arc_story_var4():
+#     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+#     btn_one = types.KeyboardButton("🗡️ Вступити в бій зі сторожами.")
+#     btn_two = types.KeyboardButton("🏃‍♀️ Постаратися уникнути сторожів.")
+#     markup.row(btn_one)
+#     markup.row(btn_two)
+#     return markup
 
+def i_arc_story_var4():
+    kb = types.InlineKeyboardMarkup()
+    btn_one = types.InlineKeyboardButton("🗡️ Вступити в бій", callback_data="🗡️ Вступити в бій")
+    btn_two = types.InlineKeyboardButton("🏃‍♀️ Постаратися обійти", callback_data="🏃‍♀️ Постаратися обійти")
+    kb.row(btn_one, btn_two)
+    return kb
 
-def arc_story_var5():
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn_one = types.KeyboardButton("👁️ Досліджувати артефакт детальніше.")
-    btn_two = types.KeyboardButton("🏃‍♂️ Піти з підземелля.")
-    markup.row(btn_one)
-    markup.row(btn_two)
-    return markup
+# def arc_story_var5():
+#     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+#     btn_one = types.KeyboardButton("👁️ Досліджувати артефакт детальніше.")
+#     btn_two = types.KeyboardButton("🏃‍♂️ Піти з підземелля.")
+#     markup.row(btn_one)
+#     markup.row(btn_two)
+#     return markup
 
+def i_arc_story_var5():
+    kb = types.InlineKeyboardMarkup()
+    btn_one = types.InlineKeyboardButton("🔍 Досліджувати артефакт", callback_data="🔍 Досліджувати артефакт")
+    btn_two = types.InlineKeyboardButton("🏃‍♂️ Піти з підземелля", callback_data="🏃‍♂️ Піти з підземелля")
+    kb.row(btn_one, btn_two)
+    return kb
 
 def arc_story_var6():
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -120,6 +144,12 @@ def arc_story_var6():
     markup.row(btn_two)
     return markup
 
+def i_arc_story_var6():
+    kb = types.InlineKeyboardMarkup()
+    btn_one = types.InlineKeyboardButton("🏃Спасти артефакт", callback_data="🏃Спасти артефакт")
+    btn_two = types.InlineKeyboardButton("🛡️ Залишити артефакт", callback_data="🛡️ Залишити артефакт")
+    kb.row(btn_one, btn_two)
+    return kb
 
 def arc_story_var7():
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -129,6 +159,12 @@ def arc_story_var7():
     markup.row(btn_two)
     return markup
 
+def i_arc_story_var7():
+    kb = types.InlineKeyboardMarkup()
+    btn_one = types.InlineKeyboardButton("👁️Вивчити артефакт", callback_data="👁️Вивчити артефакт")
+    btn_two = types.InlineKeyboardButton("🏃‍♂️ Швидко відійти", callback_data="🏃‍♂️ Швидко відійти")
+    kb.row(btn_one, btn_two)
+    return kb
 
 def arc_story_var8():
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -161,7 +197,7 @@ def arc_story_var11():
     return markup
 
 def arc_story_var_number():
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
     btn_one = types.KeyboardButton("🚀493")
     btn_two = types.KeyboardButton("💔000")
     markup.row(btn_one, btn_two)
@@ -171,19 +207,78 @@ def arc_story_var_number():
 @bot.callback_query_handler(func=lambda call: True)
 
 
-def i_arc_story_cal1(call):
+def i_arc_story_call(call):
     cid = call.message.chat.id
     data = call.data
+
+    # ПЕРШИЙ ВИБІР
+
     if data == "🌳 Пройти через ліс":
         bot.send_message(cid, '''
         Джеймс та його команда вирішують пройти через глибокий ліс. Вони потрапляють у гущавину, де їх оточують високі дерева. Ліс виявляється заплутаним, і вони заблукають. Подальший пошук артефакту ускладнюється через збірність місцевості.''',
-                         reply_markup=arc_story_var2())
+                         reply_markup=i_arc_story_var2())
         bot.delete_message(cid, call.message.message_id)
+
     elif data == "🪨 Піднятися на гору":
         bot.send_message(cid, ''' 
         Джеймс та його команда вирішують піднятися на гору для кращого огляду. Зверху вони бачать прекрасний краєвид, але ніякого міста. Але їх увагу привертає загадковий символ на скелі. Це може бути ключем до того, де знаходиться місто.''',
-                         reply_markup=arc_story_var3())
+                         reply_markup=i_arc_story_var3())
         bot.delete_message(cid, call.message.message_id)
+
+    elif data == "🚀 Назад в табір":
+        bot.send_message(cid,
+                         '''Вони розбивають табір і повертаються до свого табору, де вирішують переглянути свої збірки та зробити нові плани. Зробіть за них вибір: ''',
+                         reply_markup=i_arc_story_var1())
+        bot.delete_message(cid, call.message.message_id)
+
+    # ДРУГИЙ ВИБІР
+
+    elif data == "👣 Йти в руїни":
+        bot.send_message(cid,
+                         '''Вони розбивають табір і намагаються розібратися, як пройти крізь ліс. Нарешті, після декількох днів блукання, вони знаходять виходи з лісу. Вони потрапляють на відкрите поле, де бачать давні руїни.''',
+                         reply_markup=i_arc_story_var4())
+        bot.delete_message(cid, call.message.message_id)
+
+    elif data == "👁️ Досліджувати скелю":
+        bot.send_message(cid,
+                         '''Вони досліджують символ на скелі і розуміють, що він вказує на підземний вхід. Вони спускаються вниз і опиняються в загадковому підземеллі. Вони виявляють артефакт, який виділяється загадковим сяйвом.''',
+                         reply_markup=i_arc_story_var5())
+        bot.delete_message(cid, call.message.message_id)
+
+    # ТРЕТІЙ ВИБІР
+
+    elif data == "🗡️ Вступити в бій":
+        bot.send_message(cid,
+                         '''Джеймс та його команда намагаються уникнути зіткнення зі сторожами руїн. Вони обходять сторожів і вирішують обійти руїни. Проте вони помічають загадковий артефакт на підігрітій плиті.''',
+                         reply_markup=i_arc_story_var6())
+        bot.delete_message(cid, call.message.message_id)
+
+    elif data == "🏃‍♀️ Постаратися обійти":
+        bot.send_message(cid, '''Джеймс та його команда вирішують вступити в бій зі сторожами руїн. Бій стає жорстоким, але вони зумівають перемогти сторожів. Після бою, вони знаходять артефакт, який лежить на підігрітій плиті. Здавалося б, вони здобули перемогу, але раптово починається землетрус, і вони повинні швидко вирватися з руїн, тримаючи артефакт.''',
+                         reply_markup=i_arc_story_var7())
+        bot.delete_message(cid, call.message.message_id)
+
+    elif data == "🔍 Досліджувати артефакт":
+        bot.send_message(cid, '''Джеймс та його команда вирішують дослідити артефакт детальніше. Вони наближаються до артефакта, і відразу відчувають загадкову енергію, яка випромінює з нього. Раптово артефакт активізується, і перед ними з'являється голограма, яка вказує на напрямок подальшого дослідження.''',
+                         reply_markup=arc_story_var8())
+        bot.delete_message(cid, call.message.message_id)
+
+    elif data == "🏃‍♂️ Піти з підземелля":
+        bot.send_message(cid, '''Відчуваючи незвичну енергію артефакта, Джеймс та його команда вирішують залишити підземелля. Вони роблять кроки назад, коли раптово починається обвал, і вони швидко повертаються до виходу.''',
+                         reply_markup=arc_story_var9())
+        bot.delete_message(cid, call.message.message_id)
+
+
+
+    #КІНЦІВКИ
+
+    elif data == "🏃Спасти артефакт":
+        bot.send_message(cid, '''⚖️ Вибери 493 чи 000: ⚖️
+
+🔄 Від цього вибору залежить життя Джеймса. 🔄''', reply_markup=arc_story_var_number())
+        bot.delete_message(cid, call.message.message_id)
+
+
 
 @bot.message_handler(commands=['start', 'help'])
 
@@ -226,24 +321,24 @@ def echo_all(msg):
         bot.send_message(cid, '''Варіант 1: Глибокий ліс
 
 Джеймс та його команда вирішують пройти через глибокий ліс. Вони потрапляють у гущавину, де їх оточують високі дерева. Ліс виявляється заплутаним, і вони заблукають. Подальший пошук артефакту ускладнюється через збірність місцевості.''',
-                         reply_markup=arc_story_var2())
+                         reply_markup=i_arc_story_var2())
     elif msg.text == "🪨 Піднятися на гору для кращого огляду.":
         bot.send_message(cid, '''Варіант 2: Гора
-W   
+   
 Джеймс та його команда вирішують піднятися на гору для кращого огляду. Зверху вони бачать прекрасний краєвид, але ніякого міста. Але їх увагу привертає загадковий символ на скелі. Це може бути ключем до того, де знаходиться місто.''',
                          reply_markup=arc_story_var3())
     elif msg.text == "👣 Досліджувати руїни.":
         bot.send_message(cid,
                          '''Вони розбивають табір і намагаються розібратися, як пройти крізь ліс. Нарешті, після декількох днів блукання, вони знаходять виходи з лісу. Вони потрапляють на відкрите поле, де бачать давні руїни.''',
-                         reply_markup=arc_story_var4())
+                         reply_markup=i_arc_story_var4())
     elif msg.text == "👁️ Досліджувати символ на скелі.":
         bot.send_message(cid,
                          '''Вони досліджують символ на скелі і розуміють, що він вказує на підземний вхід. Вони спускаються вниз і опиняються в загадковому підземеллі. Вони виявляють артефакт, який виділяється загадковим сяйвом.''',
-                         reply_markup=arc_story_var5())
+                         reply_markup=i_arc_story_var5())
     elif msg.text == "🚀 Вирушити назад до табору.":
         bot.send_message(cid,
                          '''Вони розбивають табір і повертаються до свого табору, де вирішують переглянути свої збірки та зробити нові плани. Зробіть за них вибір: ''',
-                         reply_markup=arc_story_var1())
+                         reply_markup=i_arc_story_var1())
     elif msg.text == "🗡️ Вступити в бій зі сторожами.":
         bot.send_message(cid, '''Вступити в бій зі сторожами
 
