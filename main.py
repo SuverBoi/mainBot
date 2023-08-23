@@ -18,23 +18,23 @@ def main_reply_menu1():
     return markup
 def main_reply_menu():
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    markup.row(types.KeyboardButton("Твоя історія📜"), types.KeyboardButton("Смішна історія😄"),
-               types.KeyboardButton("Страшна історія😱"))
+    markup.row(types.KeyboardButton("Твоя історія📜"), types.KeyboardButton("Жарти😄"),
+               types.KeyboardButton("Хоррор😱"))
     markup.row(types.KeyboardButton("Підтримка👥"), types.KeyboardButton("Підтримати донатом💰"))
     return markup
 
 
 def story_choose_menu():
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn_one = types.KeyboardButton("🔮Таємничий артефакт🔍")
-    btn_two = types.KeyboardButton("😅Загублені у метро🚇")
-    btn_three = types.KeyboardButton("📄Бліц-турнір🏆")
-    btn_four = types.KeyboardButton("🔑Забутий пароль🔒")
-    btn_five = types.KeyboardButton("🍳Експерименти🧪")
-    btn_six = types.KeyboardButton("💡Трюки зі світлодіодами🌈")
-    btn_seven = types.KeyboardButton("✈️Місія змінити🛠️")
-    btn_eight = types.KeyboardButton("📸Подорож в минуле🕰️")
-    btn_nine = types.KeyboardButton("💪Фітнес-рекорди🏋️‍♀️")
+    btn_one = types.KeyboardButton("Артефакт🔮")
+    btn_two = types.KeyboardButton("😅У метро🚇")
+    btn_three = types.KeyboardButton("Бліц-турнір🏆")
+    btn_four = types.KeyboardButton("🔑Пароль🔒")
+    btn_five = types.KeyboardButton("Дослід🧪")
+    btn_six = types.KeyboardButton("💡Світлодіоти")
+    btn_seven = types.KeyboardButton("✈️Змінити🛠️")
+    btn_eight = types.KeyboardButton("📸Минуле🕰️")
+    btn_nine = types.KeyboardButton("💪Рекорди🏋️‍♀️")
     btn_ten = types.KeyboardButton("👈Назад👈")
 
     markup.row(btn_one, btn_two, btn_three)
@@ -416,6 +416,8 @@ horror_stories = [
 # ---------
 # WELCOME ЧАСТИНА
 # ---------
+
+@bot.message_handler(commands=['start', 'help'])
 def send_welcome(msg):
     cid = msg.chat.id
     bot.send_message(cid, '''Привіт! Вибери мову для користування ботом🌍''', reply_markup=main_reply_menu1())
@@ -441,7 +443,7 @@ def echo_all(msg):
         bot.send_message(cid, "📚 Вибери історію в меню: 📑", reply_markup=story_choose_menu())
     elif msg.text == "👈Назад👈":
         bot.send_message(cid, "🤔 Зробіть вибір:🤷‍♂️", reply_markup=main_reply_menu())
-    elif msg.text == "🔮Таємничий артефакт🔍":
+    elif msg.text == "Артефакт🔮":
         bot.send_message(cid, '''🔮Ви — археолог, який знаходить таємничий артефакт у віддаленому лісі.🔍
 
 Назва історії: "Таємниця Загубленого Міста"
@@ -665,28 +667,28 @@ def echo_all(msg):
 5375 4114 2229 8625    
 
 Ми дуже вдячні за вашу підтримку! 🙏🌟''')
-    elif msg.text == "Смішна історія😄":
+    elif msg.text == "Жарти😄":
         random_story = random.choice(funny_stories)
         bot.send_message(cid, random_story)
-    elif msg.text == "Страшна історія😱":
+    elif msg.text == "Хоррор😱":
         random_story = random.choice(horror_stories)
         bot.send_message(cid, random_story)
 
-    elif msg.text == "😅Загублені у метро🚇":
+    elif msg.text == "😅У метро🚇":
         bot.send_message(cid, "На жаль, ця історія зараз недоступна. Спробуйте ще раз пізніше.")
     elif msg.text == "📄Бліц-турнір🏆":
         bot.send_message(cid, "На жаль, ця історія зараз недоступна. Спробуйте ще раз пізніше.")
-    elif msg.text == "🔑Забутий пароль🔒":
+    elif msg.text == "🔑Пароль🔒":
         bot.send_message(cid, "На жаль, ця історія зараз недоступна. Спробуйте ще раз пізніше.")
-    elif msg.text == "🍳Експерименти🧪":
+    elif msg.text == "Дослід🧪":
         bot.send_message(cid, "На жаль, ця історія зараз недоступна. Спробуйте ще раз пізніше.")
-    elif msg.text == "💡Трюки зі світлодіодами🌈":
+    elif msg.text == "💡Світлодіоти":
         bot.send_message(cid, "На жаль, ця історія зараз недоступна. Спробуйте ще раз пізніше.")
-    elif msg.text == "✈️Місія змінити🛠️":
+    elif msg.text == "✈️Змінити🛠️":
         bot.send_message(cid, "На жаль, ця історія зараз недоступна. Спробуйте ще раз пізніше.")
-    elif msg.text == "📸Подорож в минуле🕰️":
+    elif msg.text == "📸Минуле🕰️":
         bot.send_message(cid, "На жаль, ця історія зараз недоступна. Спробуйте ще раз пізніше.")
-    elif msg.text == "💪Фітнес-рекорди🏋️‍♀️":
+    elif msg.text == "💪Рекорди🏋️‍♀️":
         bot.send_message(cid, "На жаль, ця історія зараз недоступна. Спробуйте ще раз пізніше.")
 
 
